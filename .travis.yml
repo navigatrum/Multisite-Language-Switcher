@@ -2,15 +2,17 @@ language: php
 matrix:
   include:
     - php: 7.0
-      before_script:
-        - wget https://phar.phpunit.de/phpunit-6.4.phar
-        - chmod +x phpunit-6.4.phar
-        - wget https://phar.phpunit.de/phpunit-6.5.phar
-        - chmod +x phpunit-6.5.phar
-        - bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
-      script:
-        - ./phpunit-6.4.phar
-        - ./phpunit-6.5.phar
+    - php: 7.1
+    - php: 7.2
+before_script:
+  - wget https://phar.phpunit.de/phpunit-6.4.phar
+  - chmod +x phpunit-6.4.phar
+  - wget https://phar.phpunit.de/phpunit-6.5.phar
+  - chmod +x phpunit-6.5.phar
+  - bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+script:
+  - ./phpunit-6.4.phar
+  - ./phpunit-6.5.phar
 env:
   - WP_VERSION=latest WP_MULTISITE=1
 sudo: false
