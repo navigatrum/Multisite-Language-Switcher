@@ -3,11 +3,11 @@
   "description": "Multisite Language Switcher",
   "version": "1.0.6",
   "require": {
-    "php": ">=5.6",
+    "php": "=7.2",
     "composer/installers": "~1.0.6"
   },
   "require-dev": {
-    "phpunit/phpunit": ">=5.7"
+    "phpunit/phpunit": "=5.7"
   },
   "autoload": {
     "psr-4": {
