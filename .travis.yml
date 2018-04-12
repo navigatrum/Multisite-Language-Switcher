@@ -20,5 +20,5 @@ deploy:
   skip_cleanup: true
   file: multisite-language-switcher.zip
   on:
-    repo: lloc/Multisite-Language-Switcher
+    repo: navigatrum/Multisite-Language-Switcher
     tags: true
