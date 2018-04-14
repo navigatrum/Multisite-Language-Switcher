@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 /usr/bin/curl -s http://getcomposer.org/installer | /usr/bin/php
-/usr/bin/php composer.phar install
+/usr/bin/php composer.phar update
 
 read -p 'DB User: ' uservar
 read -sp 'DB Pass: ' passvar
